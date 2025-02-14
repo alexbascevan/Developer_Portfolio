@@ -69,12 +69,15 @@ function Home() {
         </h4>
 
         <div className="icons">
+          
           <a href="https://www.linkedin.com/in/alex-bascevan-2697752b7" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} color="#6bb7f2" />
           </a>
+
           <a href="https://github.com/alexbascevan" target="_blank" rel="noopener noreferrer">
             <FaGithub size={30} color="#ffffff" />
           </a>
+
           <a href="mailto:alexbascevan@icloud.com">
             <FaEnvelope size={30} color="#d14836" />
           </a>
