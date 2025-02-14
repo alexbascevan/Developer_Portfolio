@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  background-color: #161616; /* Dark gray background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Ensures text is readable */
+}
+
+/* Grid Overlay */
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px; /* Adjust square size */
+  pointer-events: none; /* Ensures it doesn't interfere with interactions */
+  z-index: 0;
+}
+
+/* Ensures content stays above the grid */
+.home > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Portrait Image Styling */
+.portrait {
+  width: 400px; /* Smaller width for portrait style */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  object-fit: cover; /* Ensures the image fits the container */
+  display: block; /* Removes space below the image */
+  margin-top: 20px; /* Adds some space above the image */
+  padding-right: 30px;
+}
+
+.headline {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace;
+  color: #f0f0f0;
+  display: block; /* Ensure it behaves like a block element */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  min-height: 30px; /* Ensures smooth transitions */
+  transition: all 0.1s ease-in-out;
+  width: auto; /* Allow width to adjust to content */
+  margin: 10px 0; /* Adds some space */
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+/* Cursor effect */
+.cursor {
+  display: inline-block;
+  font-weight: bold;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+.cursor {
+  opacity: 0;
+}
+
+.introduction{
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  text-align: left;
+}
+
+.slogan1 {
+  font-size: 50px; /* Makes it larger */
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: left;
+  color: white; /* First slogan in white */
+}
+
+.slogan2 {
+  font-size: 50px; /* Same size */
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: left;
+  color: #c9a7ff; /* Light purple for second slogan */
+}
+
+/* Icons Styling */
+.icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px; /* Adds spacing below the text */
+  justify-content: left; /* Centers the icons horizontally */
+}
+
+.icons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  opacity: 0.7;
+}
