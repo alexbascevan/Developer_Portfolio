@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importing icons from react-icons
 import "./Home.css";
 
+
 function Home() {
   const words = ["Software Developer", "Network Engineer", "Penetration Tester"];
   const [text, setText] = useState(""); // Holds the current displayed text
@@ -64,7 +65,7 @@ function Home() {
         <h1 className="slogan2">I Secure, I Optimize</h1>
         <h4 className="headline">
           {text}
-          <span className={`cursor ${showCursor ? "visible" : ""}`}>_</span>
+          <span className={`hcursor ${showCursor ? "visible" : ""}`}>_</span>
         </h4>
 
         <div className="icons">
