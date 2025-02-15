@@ -1,13 +1,28 @@
 /* Reset margin & padding for full-screen layout */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #161616;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Ensure vertical scrolling works */
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+#root, .App {
+  min-height: 100vh;  /* Ensure the root and main app container take full height */
+  overflow-y: auto;   /* Enable scrolling if content overflows */
+}
+
+hr {
+  border: 1px solid white; /* Add this for a visible border */
+  height: 2px;
+  background-color: white;
+  margin: 20px 0;
+}

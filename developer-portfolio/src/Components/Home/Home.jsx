@@ -59,7 +59,8 @@ function Home() {
         />
       </div>
 
-      <div className="aboutme">
+      <div className="homeinfo">
+
         <h4 className="introduction">I'm Alex Bascevan</h4>
         <h1 className="slogan1">I Develop, I PWN</h1>
         <h1 className="slogan2">I Secure, I Optimize</h1>
@@ -69,7 +70,7 @@ function Home() {
         </h4>
 
         <div className="icons">
-          
+
           <a href="https://www.linkedin.com/in/alex-bascevan-2697752b7" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} color="#6bb7f2" />
           </a>
@@ -84,8 +85,6 @@ function Home() {
         </div>
 
       </div>
-
-
 
     </section>
   );

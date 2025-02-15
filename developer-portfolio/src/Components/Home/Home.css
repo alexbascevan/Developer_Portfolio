@@ -4,7 +4,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #161616;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,8 +33,6 @@
 .home {
   animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
-
-
 
 /* Grid Overlay */
 .home::before {
