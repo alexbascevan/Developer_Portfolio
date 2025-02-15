@@ -48,3 +48,10 @@
     opacity: 0;
   }
 }
+
+/* Hide custom cursor on mobile */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
