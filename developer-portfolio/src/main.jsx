@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <CustomCursor/>  disable mouse cursor in body index.css */}
+    {/* <CustomCursor/> */}
 
     <div>
       <Home />

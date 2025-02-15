@@ -6,14 +6,15 @@
 
 .cursor {
   position: absolute;
-  width: 30px;  /* Smaller cursor */
-  height: 30px; /* Smaller cursor */
+  width: 20px;  /* Cursor Size */
+  height: 20px; /* Cursor Size */
   border-radius: 50%; /* Make the cursor circular */
   background-color: transparent;
   border: 4px solid #681dc3; /* Neon purple border */
   box-shadow: 0 0 10px #681dc3, 0 0 20px #681dc3, 0 0 30px #681dc3, 0 0 40px #681dc3; /* Neon purple glowing effect */
   pointer-events: none;
   z-index: 1000;
+  transform: translate(60%, 60%); /* Position it exactly at the mouse cursor */
   transition: transform 0.1s ease-out, box-shadow 0.2s ease-in-out;
   will-change: transform;
 }

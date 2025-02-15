@@ -1,10 +1,150 @@
+/* About Me Section */
 .aboutme {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Ensures the section takes at least the full viewport height */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: flex-start; /* Align to the top */
     text-align: center;
     color: white;
+    padding-top: 50px; /* Adjust as needed for spacing from top */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    padding-bottom: 40px; /* Add bottom padding to create space from bottom */
+}
+
+/* Initial state for animation */
+.contentBlock {
+    opacity: 0;
+    transform: translateY(50px); /* Start the divs off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition for opacity and position */
+}
+  
+  /* Add this class when the content is in view */
+  .contentBlock.visible {
+    opacity: 1;
+    transform: translateY(0); /* Reset position to the original */
+}
+  
+/* About Me Title */
+.aboutme h1 {
+    font-size: 30px;
+    margin-bottom: 30px; /* Adjust spacing below title */
+    padding-bottom: 20px;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Content Block Section */
+.contentBlock {
+    background-color: rgba(63, 61, 61, 0.919);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    margin: 40px auto 40px auto; /* Ensure space between divs and from the bottom */
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+}
+
+/* Education and Certifications Titles */
+.aboutme h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 40px;
+    font-weight: 600;
+    color: #c9a7ff;
+    margin-bottom: 20px;
+}
+
+.aboutme h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    color: #f0f0f0;
+    margin: 20px 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.aboutme h4 {
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    color: #f0f0f0;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* Highlighted Text (No spans required) */
+.aboutme .highlight {
+    font-weight: 500;
+    color: #c9a7ff;
+}
+
+/* Style for horizontal rule (hr) */
+.aboutme hr {
+    margin: 20px;
+    border: 0;
+    height: 2px; /* Adjust the height to your liking */
+    background-color: #c9a7ff; /* Set the background color */
+}
+
+/* For screens with a maximum width of 1150px */
+@media screen and (max-width: 1150px) {
+    .aboutme h1 {
+        font-size: 26px; /* Slightly smaller font for medium screens */
     }
+
+    .contentBlock {
+        padding: 30px; /* Adjust padding for medium screens */
+        margin: 30px auto; /* Adjust margin for better alignment */
+        max-width: 80%; /* Reduce max-width to fit the screen */
+        margin-bottom: 40px; /* Space between the two divs */
+    }
+
+    .aboutme h2 {
+        font-size: 35px; /* Smaller title for medium screens */
+    }
+
+    .aboutme h3 {
+        font-size: 16px; /* Adjust text size for readability */
+    }
+
+    .aboutme h4 {
+        font-size: 14px; /* Smaller text for readability */
+    }
+}
+
+/* For screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .aboutme h1 {
+        font-size: 22px; /* Adjust title size for smaller screens */
+    }
+
+    .contentBlock {
+        padding: 20px; /* Reduce padding for smaller screens */
+        margin: 20px auto; /* Reduce margin to fit */
+        max-width: 90%; /* Ensure content fits within smaller screens */
+        margin-bottom: 40px; /* Space between the two divs */
+    }
+
+    .aboutme h2 {
+        font-size: 30px; /* Adjust title size */
+    }
+
+    .aboutme h3 {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .aboutme h4 {
+        font-size: 12px; /* Adjust for readability */
+    }
+
+    .aboutme hr {
+        margin: 15px; /* Adjust spacing around hr */
+    }
+}

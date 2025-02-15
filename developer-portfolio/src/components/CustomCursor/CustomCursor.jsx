@@ -1,4 +1,3 @@
-// src/components/CustomCursor/CustomCursor.jsx
 import { useState, useEffect } from 'react';
 import './CustomCursor.css';
 

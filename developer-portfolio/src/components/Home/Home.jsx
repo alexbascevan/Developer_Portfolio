@@ -7,7 +7,7 @@ function Home() {
   const words = ["Software Developer", "Network Engineer", "Penetration Tester"];
   const [text, setText] = useState(""); // Holds the current displayed text
   const [wordIndex, setWordIndex] = useState(0); // Index of the word being typed
-  const [isDeleting, setIsDeleting] = useState(false); // Tracks if we are deleting
+  const [isDeleting, setIsDeleting] = useState(false); // Tracks headline letters deleting
   const [showCursor, setShowCursor] = useState(true); // Controls the flashing cursor
 
   useEffect(() => {
