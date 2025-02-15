@@ -17,7 +17,7 @@ function AboutMe() {
         }
       });
     }, {
-      threshold: 0.50, // Trigger when 25% of the element is in the viewport
+      threshold: 0.25, // Trigger when 25% of the element is in the viewport
     });
 
     // Target all .contentBlock elements
