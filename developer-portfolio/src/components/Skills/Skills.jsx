@@ -38,7 +38,8 @@ function Skills() {
                         <div class="icon" data-label="MongoDB"><img src="/icons/mongo.svg" alt="MongoDB" class="svg-icon"/></div>
                         <div class="icon" data-label="cPanel"><img src="/icons/cpanel.svg" alt="cPanel" class="svg-icon"/></div>
                         <div class="icon" data-label="Tomcat"><img src="/icons/tomcat.svg" alt="Tomcat" class="svg-icon"/></div>
-                        <div class="icon" data-label="Postman"><img src="/icons/postman.svg" alt="Postman" class="svg-icon"/></div>
+                        <div class="icon" data-label="Hadoop"><img src="/icons/hadoop.svg" alt="Hadoop" class="svg-icon"/></div>
+                        <div class="icon" data-label="Kafka"><img src="/icons/kafka.svg" alt="Kafka" class="svg-icon"/></div>
                     </div>
                 </div>
             </div>
