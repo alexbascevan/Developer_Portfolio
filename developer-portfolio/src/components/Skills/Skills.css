@@ -153,7 +153,7 @@
 
 .skillstitle {
   font-size: 60px; 
-  color: #c9a7ff;          
+  color: white;          
   font-weight: bold;     
   justify-content: flex-start;
   margin-top: -100px;
@@ -163,7 +163,7 @@
 /* Title styling */
 .skilldivheading {
   font-size: 25px;
-  color: white; /* Your custom color */
+  color:  #c9a7ff; /* Your custom color */
   margin-bottom: 15px;
   text-align: left;
   font-family: sans-serif;
