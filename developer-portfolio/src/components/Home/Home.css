@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
 /* Home Section with Z-Axis & Y-Axis Rotation */
 .home {
   position: relative;
@@ -138,4 +139,89 @@
 .icons a:hover {
   opacity: 0.7;
   transform: scale(1.2);
+}
+
+/* Responsive Styles: Tablet & Mobile (max-width: 1150px) */
+@media (max-width: 1150px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box; /* Ensure everything stays within the viewport */
+    overflow-y: auto; /* Avoid overflow */
+  }
+
+  .portrait {
+    width: 40%;
+    padding-top: 50px;
+    margin: 0 auto 20px auto;
+  }
+
+  .homeinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .introduction,
+  .slogan1,
+  .slogan2,
+  .headline {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  .portrait {
+    margin-top: 50px;
+    width: 50%;
+  }
+
+  .introduction {
+    font-size: 16px;
+  }
+
+  .slogan1, .slogan2 {
+    font-size: 20px;
+  }
+
+  .headline {
+    font-size: 15px;
+  }
+
+  .icons {
+    gap: 10px;
+    padding-bottom: 30px;
+  }
 }
