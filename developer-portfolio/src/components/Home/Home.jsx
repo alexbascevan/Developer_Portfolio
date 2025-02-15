@@ -83,7 +83,7 @@ function Home() {
             <FaEnvelope size={30} color="#d14836" />
           </a>
 
-          <a href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/resume/Alex Bascevan - Resume.pdf" target="_blank" rel="noopener noreferrer" title="Alex Bascevan - Resume">
             <FaFileAlt size={30} color="#d14836" />
           </a>
 
