@@ -159,6 +159,7 @@
     width: 40%;
     padding-top: 50px;
     margin: 0 auto 20px auto;
+    align-self: center;
   }
 
   .homeinfo {
