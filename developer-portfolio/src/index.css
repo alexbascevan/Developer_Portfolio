@@ -21,9 +21,21 @@ html, body {
   overflow-y: auto;   /* Enable scrolling if content overflows */
 }
 
+
 hr {
   border: 1px solid white; /* Add this for a visible border */
   height: 2px;
   background-color: white;
   margin: 0px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
 }
