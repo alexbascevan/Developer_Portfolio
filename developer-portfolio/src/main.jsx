@@ -11,7 +11,7 @@ import AboutMe from './components/AboutMe/AboutMe'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CustomCursor/>
+    {/* <CustomCursor/>  disable mouse cursor in body index.css */}
 
     <div>
       <Home />

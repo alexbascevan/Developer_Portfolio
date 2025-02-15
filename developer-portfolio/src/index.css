@@ -12,7 +12,7 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: auto;   /* Ensure vertical scrolling works */
   scroll-behavior: smooth;
-  cursor: none;
+  /* cursor: none; */
 }
 
 #root, .App {
