@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa'; // Importing icons from react-icons
 import "./Home.css";
 
 
@@ -82,6 +82,11 @@ function Home() {
           <a href="mailto:alexbascevan@icloud.com">
             <FaEnvelope size={30} color="#d14836" />
           </a>
+
+          <a href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <FaFileAlt size={30} color="#d14836" />
+          </a>
+
         </div>
 
       </div>

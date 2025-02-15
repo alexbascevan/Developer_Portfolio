@@ -137,4 +137,5 @@
 
 .icons a:hover {
   opacity: 0.7;
+  transform: scale(1.2);
 }
