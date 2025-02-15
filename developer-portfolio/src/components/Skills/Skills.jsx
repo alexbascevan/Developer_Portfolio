@@ -49,6 +49,7 @@ function Skills() {
                     <h2 className='skilldivheading'> Cloud & DevOps</h2>
                     <p className="skilldivdesc">I am experienced in managing cloud services including AWS, GCP through academic projects and personal initiatives, with a strong understanding of DevOps practices and Agile methodologies.</p>
                     <div class="tech-icons">
+                        <div class="icon" data-label="Agile"><img src="/icons/agile.svg" alt="Agile" class="svg-icon"/></div>
                         <div class="icon" data-label="AWS"><span class="iconify" data-icon="logos:aws"></span></div> 
                         <div class="icon" data-label="Google Cloud"><span class="iconify" data-icon="logos:google"></span></div>
                         <div class="icon" data-label="Linux"><span class="iconify" data-icon="logos:linux-tux"></span></div>
