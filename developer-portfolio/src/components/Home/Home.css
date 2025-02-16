@@ -161,7 +161,8 @@
     margin: 0 auto 20px auto;
     align-self: center;
     margin: 20px auto;
-  }
+    padding-right: 0 ;
+   }
 
   .homeinfo {
     display: flex;
@@ -209,6 +210,7 @@
     margin-top: 50px;
     width: 50%;
     margin: 50px auto 20px auto;
+    padding-right: 0 ;
   }
 
   .introduction {
