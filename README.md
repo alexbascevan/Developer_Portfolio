@@ -1,7 +1,7 @@
 # Developer Portfolio
 
 
-This is a personal portfolio website built with **React** and styled using **CSS**. The portfolio showcases various sections including **Home**, **About Me**, **Skills**, and a **Footer**. It also includes a custom cursor for a unique user experience.
+This is a personal portfolio website built with **React** and styled using **CSS**. The portfolio showcases Alex Bascevan's skills, education and personal info.
 
 ## Features
 
