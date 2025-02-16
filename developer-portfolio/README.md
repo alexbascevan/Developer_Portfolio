@@ -1,8 +1,24 @@
-# React + Vite
+# Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## https://www.alexbascevan.com
 
-Currently, two official plugins are available:
+This is a personal portfolio website built with **React** and styled using **CSS**. The portfolio showcases various sections including **Home**, **About Me**, **Skills**, and a **Footer**. It also includes a custom cursor for a unique user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Custom Cursor**: A personalized, dynamic cursor that only appears on desktop devices.
+- **Responsive Design**: The portfolio is responsive and adapts to various screen sizes, making it mobile-friendly.
+- **Smooth Scrolling**: The page features smooth transitions and animations for an engaging experience.
+- **Grid Layout**: The skills section utilizes a grid overlay for a professional, organized look.
+
+## Screenshots
+
+### Home Page
+![Home Page](src/assets/images/readme-screenshots/home.png)
+
+### About Me Page
+![About Me Page](src/assets/images/readme-screenshots/about.png)
+
+### Skills Page
+![Skills Page](src/assets/images/readme-screenshots/skills.png)
+
