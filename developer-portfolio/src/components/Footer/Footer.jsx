@@ -23,8 +23,7 @@ function Footer(){
                 </a>
             </div>
 
-
-            <p className="copyright">&copy; {new Date().getFullYear()} Alex Bascevan Portfolio. All rights reserved.</p>
+            <p className="copyright">&copy; {new Date().getFullYear()} - Alex Bascevan</p>
         </footer>
     );
 }
