@@ -65,11 +65,11 @@ function Skills() {
                     <div className="tech-icons">
                         <div className="icon" data-label="Spring"><img src="/icons/spring.svg" alt="Spring" className="svg-icon"/></div>
                         <div className="icon" data-label="Java"><img src="/icons/java.svg" alt="Java" className="svg-icon"/></div>
+                        <div className="icon" data-label="Python"><img src="/icons/python.svg" alt="Python" className="svg-icon"/></div>
                         <div className="icon" data-label="ASP.NET"><img src="/icons/net.svg" alt="ASP.NET" className="svg-icon"/></div>
                         <div className="icon" data-label="PHP"><img src="/icons/php.svg" alt="PHP" className="svg-icon"/></div>
                         <div className="icon" data-label="Oracle DB"><img src="/icons/oracle.svg" alt="Oracle DB" className="svg-icon"/></div>
                         <div className="icon" data-label="MongoDB"><img src="/icons/mongo.svg" alt="MongoDB" className="svg-icon"/></div>
-                        <div className="icon" data-label="cPanel"><img src="/icons/cpanel.svg" alt="cPanel" className="svg-icon"/></div>
                         <div className="icon" data-label="Tomcat"><img src="/icons/tomcat.svg" alt="Tomcat" className="svg-icon"/></div>
                         <div className="icon" data-label="Hadoop"><img src="/icons/hadoop.svg" alt="Hadoop" className="svg-icon"/></div>
                         <div className="icon" data-label="Kafka"><img src="/icons/kafka.svg" alt="Kafka" className="svg-icon"/></div>
