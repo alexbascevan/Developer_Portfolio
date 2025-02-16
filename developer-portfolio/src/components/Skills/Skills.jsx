@@ -33,8 +33,6 @@ function Skills() {
     }, []);
 
 
-
-
   return (
     <section className="skills">
 
@@ -46,14 +44,13 @@ function Skills() {
                     <h2 className='skilldivheading'> Frontend</h2>
                     <p className="skilldivdesc">I'm passionate about design, animation and interactions, always aiming to build fun and responsive websites with great user experiences. </p>
                     <div className="tech-icons">
-                        <div className="icon" data-label="React"><span className="iconify" data-icon="logos:react"></span></div>
+                        <div className="icon" data-label="React"><img src="/icons/react.svg" alt="react" className="svg-icon"/></div>
                         <div className="icon" data-label="Angular"><img src="/icons/angular.svg" alt="Angular" className="svg-icon"/></div>
-                        <div className="icon" data-label="JavaScript"><span className="iconify" data-icon="logos:javascript"></span></div>
+                        <div className="icon" data-label="JavaScript"><img src="/icons/js.svg" alt="JavaSript" className="svg-icon"/></div>
                         <div className="icon" data-label="TypeScript"><img src="/icons/typescript.svg" alt="TypeScript" className="svg-icon"/></div>
-                        <div className="icon" data-label="HTML5"><span className="iconify" data-icon="logos:html-5"></span></div>
-                        <div className="icon" data-label="CSS3"><span className="iconify" data-icon="logos:css-3"></span></div>
-                        <div className="icon" data-label="Sass"><span className="iconify" data-icon="logos:sass"></span></div>
-                        <div className="icon" data-label="Bootstrap"><span className="iconify" data-icon="logos:bootstrap"></span></div>
+                        <div className="icon" data-label="HTML5"><img src="/icons/html.svg" alt="HTML5" className="svg-icon"/></div>
+                        <div className="icon" data-label="CSS-3"><img src="/icons/css.svg" alt="CSS-3" className="svg-icon"/></div>
+                        <div className="icon" data-label="Bootstrap"><img src="/icons/bootstrap.svg" alt="Bootstrap" className="svg-icon"/></div>
                         <div className="icon" data-label="Kotlin"><img src="/icons/kotlin.svg" alt="Kotlin" className="svg-icon"/></div>
                         <div className="icon" data-label="SwiftUI"><img src="/icons/swift.svg" alt="SwiftUI" className="svg-icon"/></div>
                     </div>
@@ -84,14 +81,14 @@ function Skills() {
                     <p className="skilldivdesc">I am experienced in managing cloud services including AWS, GCP through academic projects and personal initiatives, with a strong understanding of DevOps practices and Agile methodologies.</p>
                     <div className="tech-icons">
                         <div className="icon" data-label="Agile"><img src="/icons/agile.svg" alt="Agile" className="svg-icon"/></div>
-                        <div className="icon" data-label="AWS"><span className="iconify" data-icon="logos:aws"></span></div> 
-                        <div className="icon" data-label="Google Cloud"><span className="iconify" data-icon="logos:google"></span></div>
-                        <div className="icon" data-label="Linux"><span className="iconify" data-icon="logos:linux-tux"></span></div>
-                        <div className="icon" data-label="Docker"><span className="iconify" data-icon="logos:docker-icon"></span></div>
-                        <div className="icon" data-label="Jenkins"><span className="iconify" data-icon="logos:jenkins"></span></div> 
+                        <div className="icon" data-label="DevOps"><img src="/icons/devops.svg" alt="DevOps" className="svg-icon"/></div>
+                        <div className="icon" data-label="AWS"><img src="/icons/aws.svg" alt="AWS" className="svg-icon"/></div>
+                        <div className="icon" data-label="GCP"><img src="/icons/gcp.svg" alt="gcp" className="svg-icon"/></div>
+                        <div className="icon" data-label="Linux"><img src="/icons/linux.svg" alt="Linux" className="svg-icon"/></div>
+                        <div className="icon" data-label="Docker"><img src="/icons/docker.svg" alt="Docker" className="svg-icon"/></div>
+                        <div className="icon" data-label="Jenkins"><img src="/icons/jenkins.svg" alt="Jenkins" className="svg-icon"/></div> 
                         <div className="icon" data-label="Ansible"><img src="/icons/ansible.svg" alt="Ansible" className="svg-icon"/></div>
-                        <div className="icon" data-label="GitHub"><span className="iconify" data-icon="logos:github-icon"></span></div>
-                        <div className="icon" data-label="GitLab"><span className="iconify" data-icon="logos:gitlab"></span></div>
+                        <div className="icon" data-label="Github Actions"><img src="/icons/github.svg" alt="Git Hub Actions" className="svg-icon"/></div>                       
                     </div>
                 </div>
 
