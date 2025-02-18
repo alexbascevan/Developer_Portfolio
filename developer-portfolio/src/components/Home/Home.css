@@ -4,7 +4,8 @@
 .home {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,9 +151,8 @@
     justify-content: flex-start;
     text-align: center;
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box; /* Ensure everything stays within the viewport */
-    overflow-y: auto; /* Avoid overflow */
   }
 
   .portrait {
@@ -201,9 +201,8 @@
     justify-content: flex-start;
     text-align: center;
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
-    overflow-y: auto;
   }
 
   .portrait {
