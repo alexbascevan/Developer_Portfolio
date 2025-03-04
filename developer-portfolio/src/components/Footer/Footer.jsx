@@ -14,7 +14,7 @@ function Footer(){
                 <FaGithub size={30} color="#ffffff" />
                 </a>
 
-                <a href="mailto:alexbascevan@icloud.com">
+                <a href="mailto:ab@alexbascevan.com">
                 <FaEnvelope size={30} color="#d14836" />
                 </a>
 
