@@ -41,7 +41,7 @@ function AboutMe() {
           ASSOCIATE'S DEGREE | Sheridan College <br />
           2023 - <span className="highlight">Present</span> <br />
         </h3>
-        <h4>I am currently a 5th Semester Student, with an expected graduation date of December 2025.</h4>
+        <h4>I am currently in my final year, with an expected graduation date of December 2025.</h4>
       </div>
 
       <div className="contentBlock">
