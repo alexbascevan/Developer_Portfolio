@@ -39,9 +39,9 @@ function AboutMe() {
         <h3>
           SOFTWARE DEVELOPMENT NETWORK ENGINEERING <br />
           ASSOCIATE'S DEGREE | Sheridan College <br />
-          2023 - <span className="highlight">Present</span> <br />
+          2023 - <span className="highlight">2025</span> <br />
         </h3>
-        <h4>I am currently in my final year, with an expected graduation date of December 2025.</h4>
+        <h4>Associate’s degree focused on software engineering, network infrastructure, and system design. Completed projects involving full-stack applications, cloud deployment, and cybersecurity practices.</h4>
       </div>
 
       <div className="contentBlock">
