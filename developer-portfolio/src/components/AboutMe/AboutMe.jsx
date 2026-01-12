@@ -41,7 +41,7 @@ function AboutMe() {
           ASSOCIATE'S DEGREE | Sheridan College <br />
           2023 - <span className="highlight">2025</span> <br />
         </h3>
-        <h4>Associate’s degree focused on software engineering, network infrastructure, and system design. Completed projects involving full-stack applications, cloud deployment, and cybersecurity practices.</h4>
+        <h4>Completed an Associate’s degree with a focus on software engineering, backend development, networking fundamentals, and real-world application design. Developed hands-on experience through collaborative projects and a competitive capstone, with emphasis on system architecture, APIs, databases, and cloud deployment.</h4>
       </div>
 
       <div className="contentBlock">
