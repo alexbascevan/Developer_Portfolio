@@ -1,0 +1,129 @@
+/* ======================
+   Container for all projects
+========================= */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap to next row */
+  justify-content: center; /* Center cards horizontally */
+  align-items: flex-start;
+  gap: 30px; /* Space between cards */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ======================
+   Individual Project Card
+========================= */
+.project-item {
+  position: relative;
+  padding: 30px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: rgba(63, 61, 61, 0.919);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all content horizontally */
+  text-align: center;  /* Center text */
+  width: 500px; /* Fixed width for desktop */
+  box-shadow: 0px 10px 20px rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+
+  /* Fade-in effect */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Make visible when scrolled into view */
+.project-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card title */
+.project-item h2 {
+  font-size: 25px;
+  color: #c9a7ff;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+
+  /* Allow wrapping */
+  height: auto;
+  overflow: visible;
+  white-space: normal;
+}
+
+/* Card description */
+.project-item p {
+  font-size: 15px;
+  color: white;
+  line-height: 1.5;
+  font-family: sans-serif;
+
+  /* Allow multi-line */
+  height: auto;
+  overflow: visible;
+}
+
+/* Card image */
+.project-image {
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* ======================
+   Responsive Styles
+========================= */
+
+/* Tablet & Small Desktop (max-width: 1150px) */
+@media (max-width: 1150px) {
+  .project-item {
+    width: 45%;
+    padding: 25px;
+    margin: 10px 0;
+  }
+
+  .project-item h2 {
+    font-size: 22px;
+  }
+
+  .project-item p {
+    font-size: 14px;
+  }
+
+  .project-image {
+    height: 120px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .projects-list {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .project-item {
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  .project-item h2 {
+    font-size: 20px;
+  }
+
+  .project-item p {
+    font-size: 14px;
+  }
+
+  .project-image {
+    height: 110px;
+  }
+}

@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import Skills from './components/Skills/Skills';
 import AboutMe from './components/AboutMe/AboutMe';
 import Footer from './components/Footer/Footer';
+import Projects from './components/Projects/Projects';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -39,6 +40,8 @@ const App = () => {
         <AboutMe />
         <hr />
         <Skills />
+        <hr />
+        <Projects />
         <hr />
         <Footer />
       </div>
