@@ -2,33 +2,29 @@ import React, { useEffect } from 'react';
 import './AboutMe.css';
 
 function AboutMe() {
-  useEffect(() => {
-    // Create an intersection observer
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Add the 'visible' class when the element is in the viewport
-          entry.target.classList.add('visible');
-          // console.log("visibile");
-        } else {
-          // Remove the 'visible' class when the element is out of the viewport
-          entry.target.classList.remove('visible');
-          // console.log("invisible");
-        }
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              entry.target.classList.remove('visible');
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+  
+      requestAnimationFrame(() => {
+        document
+          .querySelectorAll('.contentBlock')
+          .forEach(card => observer.observe(card));
       });
-    }, {
-      threshold: 0.25, // Trigger when 25% of the element is in the viewport
-    });
-
-    // Target all .contentBlock elements
-    const contentBlocks = document.querySelectorAll('.contentBlock');
-    contentBlocks.forEach(block => {
-      observer.observe(block); // Start observing each block
-    });
-
-    // Cleanup observer on component unmount
-    return () => observer.disconnect();
-  }, []);
+  
+      return () => observer.disconnect();
+    }, []);
 
   return (
     <section className="aboutme">

@@ -3,35 +3,29 @@ import './Skills.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Skills() {
-
-    useEffect(() => {
-        // Create an intersection observer
-        const observer = new IntersectionObserver((entries, observer) => {
+    
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            // Add the 'visible' class when the element is in the viewport
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            // console.log("visibile");
-            } else {
-            // Remove the 'visible' class when the element is out of the viewport
+          } else {
             entry.target.classList.remove('visible');
-            // console.log("invisible");
-            }
+          }
         });
-        }, {
-        threshold: 0.25, // Trigger when 25% of the element is in the viewport
-        });
+      },
+      { threshold: 0.25 }
+    );
 
-        // Target all .contentBlock elements
-        const contentBlocks = document.querySelectorAll('.skillsdivs');
-        contentBlocks.forEach(block => {
-        observer.observe(block); // Start observing each block
-        });
+    requestAnimationFrame(() => {
+      document
+        .querySelectorAll('.skillsdivs')
+        .forEach(card => observer.observe(card));
+    });
 
-        // Cleanup observer on component unmount
-        return () => observer.disconnect();
-    }, []);
-
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="skills">
