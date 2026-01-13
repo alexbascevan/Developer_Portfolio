@@ -16,13 +16,14 @@ footer:before {
 
 /* Footer Styling */
 footer {
-    text-align: center;
-    color: white; /* Light purple text color */
-    padding: 0px;
-    width: 100%;
-    bottom: 0;
-    position: relative;
+  position: relative;
+  isolation: isolate; /* prevents z-index bleed */
+  width: 100%;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* ensures grid never overflows */
 }
+
 
 .copyright {
     margin: 30px
