@@ -5,7 +5,7 @@ export const projectData = [
         description: "A comprehensive network reconnaissance and vulnerability scanning tool designed to identify and exploit security weaknesses in target systems. Rogue Eye combines various scanning techniques and tools to provide a detailed analysis of network vulnerabilities, helping security professionals and ethical hackers enhance their penetration testing capabilities.",
         image: "/images/projects/RogueEye.png",
         projectUrl: "https://github.com/alexbascevan/Rogue-Eye",
-        techStack: ["Spring", "Angular", "Python", "Flask", "AWS", "MQTT"]
+        techStack: ["Spring", "Angular", "Python", "Flask", "AWS", "MQTT", "Shell"]
     },
     {
         id: 2,

@@ -1,4 +1,5 @@
 import { projectData } from "../../data/projects";
+import { FaGithub} from 'react-icons/fa'; // Importing icons from react-icons
 import React, { useEffect } from 'react';
 import './Projects.css';
 
@@ -65,6 +66,9 @@ function Projects() {
                 </span>
               ))}
             </div>
+            <br/>
+            <a href={project.projectUrl} target="_blank" rel="noopener noreferrer"> <FaGithub size={30} color="#ffffff" /> </a>
+
           </div>
         ))}
       </div>

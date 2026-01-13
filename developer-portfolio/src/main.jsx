@@ -31,7 +31,6 @@ const App = () => {
 
   return (
     <StrictMode>
-      {/* Only render CustomCursor if not on mobile */}
       {!isMobile && <CustomCursor />}
       
       <div>
@@ -45,6 +44,7 @@ const App = () => {
         <hr />
         <Footer />
       </div>
+      
     </StrictMode>
   );
 };
