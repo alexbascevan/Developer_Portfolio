@@ -1,30 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./AboutMe.css";
 import {aboutMeData} from "../../data/aboutMe";
+import useIntersectionAnimation from "../../hooks/useIntersectionAnimation";
 
 function AboutMe() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
-
-    requestAnimationFrame(() => {
-      document.querySelectorAll(".contentBlock").forEach((card) => {
-        observer.observe(card);
-      });
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  useIntersectionAnimation('.contentBlock');
 
   return (
     <section className="aboutme">
@@ -57,8 +37,7 @@ function AboutMe() {
                 </>
               )}
 
-              {section.type === "certifications" &&
-                entryIndex !== section.entries.length - 1 && <hr />}
+              {entryIndex !== section.entries.length - 1 && <hr />}
             </React.Fragment>
           ))}
         </div>

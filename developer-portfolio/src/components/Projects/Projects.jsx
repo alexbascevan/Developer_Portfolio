@@ -1,35 +1,12 @@
 import { projectData } from "../../data/projects";
 import { FaGithub} from 'react-icons/fa'; // Importing icons from react-icons
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Projects.css';
+import useIntersectionAnimation from '../../hooks/useIntersectionAnimation';
 
 
 function Projects() {
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
-
-    requestAnimationFrame(() => {
-      document
-        .querySelectorAll('.project-item')
-        .forEach(card => observer.observe(card));
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-
+  useIntersectionAnimation('.project-item');
 
   return (
 

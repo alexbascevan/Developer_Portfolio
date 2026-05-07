@@ -1,31 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Skills.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {skillsData} from "../../data/skills";
+import useIntersectionAnimation from "../../hooks/useIntersectionAnimation";
 
 function Skills() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
-
-    requestAnimationFrame(() => {
-      document.querySelectorAll(".skillsdivs").forEach((card) => {
-        observer.observe(card);
-      });
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  useIntersectionAnimation('.skillsdivs');
 
   return (
     <section className="skills">
