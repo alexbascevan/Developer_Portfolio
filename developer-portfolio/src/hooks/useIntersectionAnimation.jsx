@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 
-const useIntersectionAnimation = (selector, threshold = 0.25) => {
+
+const useIntersectionAnimation = (selector = '.section', threshold = 0.25) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Only animate once
           }
         });
       },
