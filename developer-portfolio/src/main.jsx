@@ -2,12 +2,14 @@ import { StrictMode, useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles/globals.css';
 
+import { ThemeProvider } from './context/ThemeContext';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import Home from './components/home/Home';
 import Skills from './components/Skills/Skills';
 import AboutMe from './components/AboutMe/AboutMe';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
+import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,20 +33,22 @@ const App = () => {
 
   return (
     <StrictMode>
-      {!isMobile && <CustomCursor />}
-      
-      <div>
-        <Home />
-        <hr />
-        <AboutMe />
-        <hr />
-        <Skills />
-        <hr />
-        <Projects />
-        <hr />
-        <Footer />
-      </div>
-      
+      <ThemeProvider>
+        {!isMobile && <CustomCursor />}
+        <ThemeToggle />
+        
+        <div>
+          <Home />
+          <hr />
+          <AboutMe />
+          <hr />
+          <Skills />
+          <hr />
+          <Projects />
+          <hr />
+          <Footer />
+        </div>
+      </ThemeProvider>
     </StrictMode>
   );
 };

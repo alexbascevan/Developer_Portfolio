@@ -22,6 +22,8 @@ html, body {
   height: 100%;
   background-color: var(--bg-color);
   overflow: hidden;  /* Disable the default scrollbars */
+  color: var(--text-color);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
   /* cursor: none; */
 }
 
