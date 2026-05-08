@@ -24,6 +24,7 @@ A modern, professionally designed personal portfolio website showcasing skills, 
 - **Responsive Design**: Fully responsive across all devices (mobile, tablet, desktop)
 - **Grid Layout**: Professional grid overlay background for visual appeal
 - **Performance Optimized**: Built with Vite for fast build times and optimal performance
+- **Contact Form**: Email contact form powered by Formspree with real-time validation and success notifications
 
 ### 🎨 Visual Effects
 - **Section Transitions**: Smooth fade-in/fade-out animations as you scroll
@@ -54,8 +55,7 @@ A modern, professionally designed personal portfolio website showcasing skills, 
 | **Styling** | CSS3, CSS Variables, Flexbox/Grid |
 | **Icons** | React Icons, Font Awesome |
 | **Build Tool** | Vite 6 |
-| **Linting** | ESLint |
-| **Package Manager** | npm/yarn |
+| **Linting** | ESLint || **Email Service** | Formspree (@formspree/react) || **Package Manager** | npm/yarn |
 
 ---
 
