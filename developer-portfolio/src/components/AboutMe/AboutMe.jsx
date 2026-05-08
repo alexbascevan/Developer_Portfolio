@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutMe.css";
+import "../../styles/aboutme.css";
 import {aboutMeData} from "../../data/aboutMe";
 import useIntersectionAnimation from "../../hooks/useIntersectionAnimation";
 

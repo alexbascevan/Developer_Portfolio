@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+@import './variables.css';
+@import './animations.css';
 
-/* Home Section with Z-Axis & Y-Axis Rotation */
+/* ======================
+   Home Section
+========================= */
 .home {
   position: relative;
   width: 100%;
@@ -10,33 +14,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
-  /* Apply the animation */
+  color: var(--text-color);
   animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
-@keyframes flipIn {
-  0% {
-    transform: perspective(800px) rotateY(90deg) translateY(100px) scale(0.8);
-    opacity: 0;
-  }
-  40% {
-    transform: perspective(800px) rotateY(-15deg) translateY(-30px) scale(1.1);
-    opacity: 1;
-  }
-  70% {
-    transform: perspective(800px) rotateY(10deg) translateY(10px) scale(0.95);
-  }
-  100% {
-    transform: perspective(800px) rotateY(0deg) translateY(0) scale(1);
-  }
-}
-
-.home {
-  animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-}
-
-/* Grid Overlay */
 .home::before {
   content: "";
   position: absolute;
@@ -44,24 +25,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-image: linear-gradient(var(--grid-overlay) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--grid-overlay) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Ensure content stays above the grid */
 .home > div {
   position: relative;
   z-index: 1;
 }
 
-/* Portrait Image Styling */
+/* Portrait Image */
 .portrait {
   width: 400px;
   height: auto;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   object-fit: cover;
   display: block;
   margin-top: 20px;
@@ -72,13 +52,13 @@
 .headline {
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Fira Code', monospace;
-  color: #f0f0f0;
+  font-family: var(--font-code);
+  color: var(--text-light);
   display: block;
   white-space: nowrap;
   overflow: hidden;
   min-height: 30px;
-  transition: all 0.1s ease-in-out;
+  transition: all var(--transition-fast);
   width: auto;
   margin: 10px 0;
   text-align: left;
@@ -88,20 +68,17 @@
 .hcursor {
   display: inline-block;
   font-weight: bold;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity var(--transition-normal);
+  opacity: 0;
 }
 
 .hcursor.visible {
   opacity: 1;
 }
 
-.hcursor {
-  opacity: 0;
-}
-
 /* Introduction Text */
 .introduction {
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-code);
   font-size: 18px;
   text-align: left;
   padding-bottom: 30px;
@@ -111,23 +88,23 @@
 .slogan1 {
   font-size: 50px;
   font-weight: 600;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   text-align: left;
-  color: white;
+  color: var(--text-color);
 }
 
 .slogan2 {
   font-size: 50px;
   font-weight: 700;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-mono);
   text-align: left;
-  color: #c9a7ff;
+  color: var(--accent-color);
 }
 
 /* Icons Styling */
 .icons {
   display: flex;
-  gap: 20px;
+  gap: var(--gap-lg);
   margin-top: 50px;
   justify-content: left;
 }
@@ -142,7 +119,9 @@
   transform: scale(1.2);
 }
 
-/* Responsive Styles: Tablet & Mobile (max-width: 1150px) */
+/* ======================
+   Responsive Styles
+========================= */
 @media (max-width: 1150px) {
   .home {
     display: flex;
@@ -152,7 +131,7 @@
     text-align: center;
     padding: 20px;
     min-height: 100vh;
-    box-sizing: border-box; /* Ensure everything stays within the viewport */
+    box-sizing: border-box;
   }
 
   .portrait {
@@ -160,9 +139,8 @@
     padding-top: 50px;
     margin: 0 auto 20px auto;
     align-self: center;
-    margin: 20px auto;
-    padding-right: 0 ;
-   }
+    padding-right: 0;
+  }
 
   .homeinfo {
     display: flex;
@@ -186,13 +164,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: var(--gap-md);
     margin-top: 30px;
     padding-bottom: 30px;
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .home {
     display: flex;
@@ -209,7 +186,7 @@
     margin-top: 50px;
     width: 50%;
     margin: 50px auto 20px auto;
-    padding-right: 0 ;
+    padding-right: 0;
   }
 
   .introduction {
@@ -225,7 +202,7 @@
   }
 
   .icons {
-    gap: 10px;
+    gap: var(--gap-sm);
     padding-bottom: 30px;
   }
 }

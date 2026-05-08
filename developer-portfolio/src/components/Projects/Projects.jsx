@@ -1,7 +1,7 @@
 import { projectData } from "../../data/projects";
-import { FaGithub} from 'react-icons/fa'; // Importing icons from react-icons
+import { FaGithub} from 'react-icons/fa';
 import React from 'react';
-import './Projects.css';
+import '../../styles/projects.css';
 import useIntersectionAnimation from '../../hooks/useIntersectionAnimation';
 
 

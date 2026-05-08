@@ -1,0 +1,59 @@
+/* CSS Variables for consistent theming */
+:root {
+  /* Colors */
+  --bg-color: #161616;
+  --text-color: #ffffff;
+  --text-light: #f0f0f0;
+  --accent-color: #c9a7ff;
+  --accent-secondary: #681dc3;
+  --link-color: #6bb7f2;
+  --github-color: #ffffff;
+  --email-color: #d14836;
+  --card-bg: rgba(63, 61, 61, 0.919);
+  --grid-overlay: rgba(255, 255, 255, 0.1);
+  --border-color: #ffffff;
+
+  /* Fonts */
+  --font-family: sans-serif;
+  --font-code: 'Fira Code', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --transition-fast: 0.1s ease-in-out;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease-out;
+
+  /* Shadows */
+  --box-shadow: 0px 10px 20px rgb(0, 0, 0);
+  --glow-small: 0 0 10px;
+  --glow-medium: 0 0 20px;
+  --glow-large: 0 0 40px;
+
+  /* Spacing - Fluid */
+  --gap-xs: clamp(5px, 1vw, 8px);
+  --gap-sm: clamp(8px, 1.5vw, 12px);
+  --gap-md: clamp(12px, 2vw, 20px);
+  --gap-lg: clamp(15px, 2.5vw, 30px);
+  --gap-xl: clamp(20px, 3vw, 40px);
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+
+  /* Section Padding - Fluid */
+  --section-padding-top: clamp(15px, 3vw, 30px);
+  --section-padding-bottom: clamp(30px, 5vw, 50px);
+
+  /* Fluid Typography Scales */
+  --font-size-xs: clamp(12px, 1.5vw, 16px);
+  --font-size-sm: clamp(14px, 2vw, 18px);
+  --font-size-base: clamp(16px, 2.5vw, 20px);
+  --font-size-md: clamp(18px, 3vw, 24px);
+  --font-size-lg: clamp(24px, 4vw, 32px);
+  --font-size-xl: clamp(28px, 5vw, 40px);
+  --font-size-2xl: clamp(32px, 6vw, 50px);
+
+  /* Touch Target (min 44px for accessibility) */
+  --tap-target: 44px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "../../styles/skills.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import {skillsData} from "../../data/skills";
 import useIntersectionAnimation from "../../hooks/useIntersectionAnimation";

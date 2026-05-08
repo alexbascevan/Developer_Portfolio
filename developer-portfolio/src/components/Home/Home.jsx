@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa'; // Importing icons from react-icons
-import "./Home.css";
+import { FaLinkedin, FaGithub, FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import "../../styles/home.css";
 
 
 function Home() {

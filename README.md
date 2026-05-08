@@ -13,11 +13,11 @@ This is a personal portfolio website built with **React** and styled using **CSS
 ## Screenshots
 
 ### Home Page
-![Home Page](/developer-portfolio/src/assets/images/readme-screenshots/home.png)
+![Home Page](/developer-portfolio/public/images/readme-screenshots/home.png)
 
 ### About Me Page
-![About Me Page](/developer-portfolio/src/assets/images/readme-screenshots/about.png)
+![About Me Page](/developer-portfolio/public/images/readme-screenshots/about.png)
 
 ### Skills Page
-![Skills Page](/developer-portfolio/src/assets/images/readme-screenshots/skills.png)
+![Skills Page](/developer-portfolio/public/images/readme-screenshots/skills.png)
 

@@ -1,0 +1,52 @@
+@import './variables.css';
+
+/* ======================
+   Fade In & Slide Up Animation
+========================= */
+.fade-slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+  will-change: opacity, transform;
+}
+
+.fade-slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================
+   Flip In Animation (Home)
+========================= */
+@keyframes flipIn {
+  0% {
+    transform: perspective(800px) rotateY(90deg) translateY(100px) scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(800px) rotateY(-15deg) translateY(-30px) scale(1.1);
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(800px) rotateY(10deg) translateY(10px) scale(0.95);
+  }
+  100% {
+    transform: perspective(800px) rotateY(0deg) translateY(0) scale(1);
+  }
+}
+
+/* ======================
+   Trail Animation (Cursor)
+========================= */
+@keyframes trailAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

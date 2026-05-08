@@ -8,7 +8,6 @@ const useIntersectionAnimation = (selector, threshold = 0.25) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           }
-          // Removed the else clause to prevent removing the class, making it smooth
         });
       },
       { threshold }

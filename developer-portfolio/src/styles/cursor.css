@@ -1,0 +1,56 @@
+@import './variables.css';
+@import './animations.css';
+
+/* ======================
+   Custom Cursor
+========================= */
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 4px solid var(--accent-secondary);
+  box-shadow: 
+    0 0 10px var(--accent-secondary), 
+    0 0 20px var(--accent-secondary), 
+    0 0 30px var(--accent-secondary), 
+    0 0 40px var(--accent-secondary);
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(60%, 60%);
+  transition: 
+    transform var(--transition-fast), 
+    box-shadow var(--transition-normal);
+  will-change: transform;
+}
+
+.cursor:hover {
+  transform: scale(1.5);
+  box-shadow: 
+    0 0 20px var(--accent-secondary), 
+    0 0 40px var(--accent-secondary), 
+    0 0 60px var(--accent-secondary), 
+    0 0 60px var(--accent-secondary);
+}
+
+/* ======================
+   Neon Trail
+========================= */
+.trail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-secondary);
+  animation: trailAnimation 1s ease-out forwards;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Hide on Mobile */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
