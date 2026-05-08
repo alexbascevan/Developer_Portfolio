@@ -7,6 +7,7 @@ import CustomCursor from './components/CustomCursor/CustomCursor';
 import Home from './components/home/Home';
 import Skills from './components/Skills/Skills';
 import AboutMe from './components/AboutMe/AboutMe';
+import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
@@ -45,6 +46,8 @@ const App = () => {
           <Skills />
           <hr />
           <Projects />
+          <hr />
+          <ContactMe />
           <hr />
           <Footer />
         </div>

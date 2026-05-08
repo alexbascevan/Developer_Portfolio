@@ -33,7 +33,8 @@
 /* Initial state - before entering viewport */
 .skillsdivs,
 .project-item,
-.contentBlock {
+.contentBlock,
+.contactForm {
   opacity: 0;
   transform: translateY(60px) scale(0.95);
   filter: blur(8px);
@@ -47,7 +48,8 @@
 /* Entering viewport (scrolling down) */
 .skillsdivs.visible,
 .project-item.visible,
-.contentBlock.visible {
+.contentBlock.visible,
+.contactForm.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0px);
@@ -56,7 +58,8 @@
 /* Leaving viewport (scrolling up) */
 .skillsdivs.leaving,
 .project-item.leaving,
-.contentBlock.leaving {
+.contentBlock.leaving,
+.contactForm.leaving {
   opacity: 0;
   transform: translateY(-40px) scale(0.98);
   filter: blur(8px);

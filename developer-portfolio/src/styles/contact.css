@@ -1,0 +1,271 @@
+@import './variables.css';
+@import './animations.css';
+
+/* ======================
+   Contact Me Section
+========================= */
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+/* Contact Title */
+.contact h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+}
+
+/* Contact Subtitle */
+.contactSubtitle {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contactForm {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Form Group */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-code);
+}
+
+/* Validation Error Messages */
+.formGroup > div {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #f44336;
+}
+
+.formGroup > div:not(:empty) {
+  display: block;
+}
+
+/* Success Alert */
+.successAlert {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(56, 142, 60, 0.15));
+  border: 2px solid #4caf50;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(10px);
+  animation: slideInUp 0.5s ease-out;
+}
+
+.alertContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+
+.alertIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.alertContent p {
+  color: #2e7d32;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.dismissBtn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #4caf50;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.dismissBtn:hover {
+  color: #2e7d32;
+  transform: scale(1.2);
+}
+
+.dismissBtn:active {
+  transform: scale(0.95);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 14px;
+  transition: all var(--transition-normal);
+  resize: vertical;
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(201, 167, 255, 0.2);
+}
+
+.formGroup textarea {
+  min-height: 150px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* Submit Button */
+.submitBtn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+  color: #000;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: var(--font-code);
+  margin-top: 10px;
+  box-shadow: 0 0 20px rgba(201, 167, 255, 0.3);
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(201, 167, 255, 0.5);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Status Messages */
+.statusMessage {
+  margin-top: 20px;
+  padding: 12px 15px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.statusMessage.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.statusMessage.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact h1 {
+    font-size: 24px;
+  }
+
+  .contactSubtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .contactForm {
+    padding: 30px 20px;
+  }
+
+  .formGroup {
+    margin-bottom: 20px;
+  }
+
+  .submitBtn {
+    width: 100%;
+    padding: 14px 20px;
+  }
+}
