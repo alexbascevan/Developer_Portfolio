@@ -31,10 +31,7 @@ function AboutMe() {
               {section.type === "education" ? (
                 <h4>{entry.description}</h4>
               ) : (
-                <>
-                  <h4>{entry.subtitle}</h4>
-                  <p>{entry.description}</p>
-                </>
+                <p>{entry.description}</p>
               )}
 
               {entryIndex !== section.entries.length - 1 && <hr />}
