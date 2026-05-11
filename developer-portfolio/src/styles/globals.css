@@ -33,6 +33,7 @@ html, body {
   height: 100%;
   overflow: scroll; /* Allow scrolling without showing the scrollbar */
   -webkit-overflow-scrolling: touch; /* Improve scrolling on mobile */
+  padding-top: 60px;
 }
 
 /* Add top padding for navbar on desktop */
