@@ -49,7 +49,7 @@ const App = () => {
         {!isMobile && <CustomCursor />}
         <Navigation />
 
-        <div>
+        <div style={{ opacity: isLoading ? 0 : 1 }}>
           <Home />
           <hr />
           <AboutMe />

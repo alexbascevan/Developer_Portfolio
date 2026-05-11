@@ -15,7 +15,7 @@
   justify-content: center;
   text-align: center;
   color: var(--text-color);
-  animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) 2.8s both;
 }
 
 .home::before {
