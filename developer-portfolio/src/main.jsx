@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './styles/globals.css';
 
 import { ThemeProvider } from './context/ThemeContext';
+import Loader from './components/Loader/Loader';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/home/Home';
@@ -14,6 +15,7 @@ import Projects from './components/Projects/Projects';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -32,9 +34,18 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <StrictMode>
       <ThemeProvider>
+        <Loader isLoading={isLoading} />
         {!isMobile && <CustomCursor />}
         <Navigation />
 
