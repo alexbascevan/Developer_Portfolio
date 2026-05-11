@@ -8,7 +8,7 @@ function AboutMe() {
 
   return (
     <section className="aboutme" id="about" data-nav-section>
-      <h1>{aboutMeData.title}</h1>
+      <h1 className="aboutme-title">About Me</h1>
 
       {aboutMeData.sections.map((section, sectionIndex) => (
         <div className={section.className} key={sectionIndex}>

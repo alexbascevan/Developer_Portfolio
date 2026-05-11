@@ -15,7 +15,7 @@
   justify-content: flex-start;
   text-align: center;
   color: var(--text-color);
-  padding-top: 50px;
+  padding-top: var(--section-padding-top);
   box-sizing: border-box;
   padding-bottom: 40px;
 }
@@ -23,6 +23,7 @@
 /* About Me Title */
 .aboutme h1 {
   font-size: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
   padding-bottom: 20px;
   color: var(--text-color);

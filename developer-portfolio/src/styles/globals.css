@@ -35,12 +35,14 @@ html, body {
   overflow: scroll; /* Allow scrolling without showing the scrollbar */
   -webkit-overflow-scrolling: touch; /* Improve scrolling on mobile */
   padding-top: 60px;
+  scroll-padding-top: 60px;
 }
 
 /* Add top padding for navbar on desktop */
 @media (min-width: 1024px) {
   #root, .App {
     padding-top: 70px;
+    scroll-padding-top: 70px;
   }
 }
 

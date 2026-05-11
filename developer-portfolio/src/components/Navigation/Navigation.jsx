@@ -37,12 +37,35 @@ const Navigation = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       const scrollContainer = document.querySelector('#root');
-      const targetPosition = section.offsetTop;
-      scrollContainer.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth',
-      });
-      setMobileMenuOpen(false);
+      
+      // Get header elements
+      const navbar = document.querySelector('.navbar');
+      const mobileHeader = document.querySelector('.mobile-header');
+      
+      // Measure currently visible header height using getBoundingClientRect
+      const navbarHeight = navbar?.getBoundingClientRect().height || 0;
+      const mobileHeaderHeight = mobileHeader?.getBoundingClientRect().height || 0;
+      const headerHeight = navbarHeight || mobileHeaderHeight;
+      
+      // Close mobile menu first if open
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+        // Wait for menu animation/layout to settle before scrolling
+        setTimeout(() => {
+          performScroll();
+        }, 150);
+      } else {
+        performScroll();
+      }
+      
+      function performScroll() {
+        // Calculate target position accounting for header offset
+        const targetPosition = section.offsetTop - headerHeight;
+        scrollContainer.scrollTo({
+          top: Math.max(0, targetPosition),
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
