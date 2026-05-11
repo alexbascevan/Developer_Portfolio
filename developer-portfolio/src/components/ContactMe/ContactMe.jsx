@@ -23,7 +23,7 @@ function ContactMe() {
 
   if (state.succeeded && !dismissed) {
     return (
-      <section className="contact">
+      <section className="contact" id="contact" data-nav-section>
         <h1>Get In Touch</h1>
         <div className="successAlert">
           <div className="alertContent">
@@ -43,7 +43,7 @@ function ContactMe() {
   }
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact" data-nav-section>
       <h1>Get In Touch</h1>
       <p className="contactSubtitle">Have a question or want to collaborate? Feel free to reach out!</p>
       

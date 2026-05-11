@@ -50,7 +50,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="home">
+    <section className="home" id="home" data-nav-section>
       <div>
         <img 
           className="portrait"

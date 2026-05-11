@@ -2,7 +2,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 999;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -35,6 +35,13 @@
 
 .theme-toggle:hover .theme-icon {
   transform: rotate(20deg);
+}
+
+/* Desktop view - move toggle below navbar */
+@media (min-width: 1024px) {
+  .theme-toggle {
+    top: 80px;
+  }
 }
 
 @media (max-width: 768px) {

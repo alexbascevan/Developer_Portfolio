@@ -4,13 +4,13 @@ import './styles/globals.css';
 
 import { ThemeProvider } from './context/ThemeContext';
 import CustomCursor from './components/CustomCursor/CustomCursor';
+import Navigation from './components/Navigation/Navigation';
 import Home from './components/home/Home';
 import Skills from './components/Skills/Skills';
 import AboutMe from './components/AboutMe/AboutMe';
 import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
-import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -36,8 +36,8 @@ const App = () => {
     <StrictMode>
       <ThemeProvider>
         {!isMobile && <CustomCursor />}
-        <ThemeToggle />
-        
+        <Navigation />
+
         <div>
           <Home />
           <hr />

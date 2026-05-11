@@ -8,7 +8,7 @@ function Skills() {
   useIntersectionAnimation('.skillsdivs');
 
   return (
-    <section className="skills">
+    <section className="skills" id="skills" data-nav-section>
       <h1 className="skillstitle">{skillsData.title}</h1>
 
       <div className="skillsdivs">

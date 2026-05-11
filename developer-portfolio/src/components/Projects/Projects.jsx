@@ -10,7 +10,7 @@ function Projects() {
 
   return (
 
-    <div className="projects-container">
+    <section className="projects-container" id="projects" data-nav-section>
 
       <h1 className="projects-title">Projects</h1>
       
@@ -50,7 +50,7 @@ function Projects() {
         ))}
       </div>
 
-    </div>
+    </section>
   );
 }
 

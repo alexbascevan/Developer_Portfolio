@@ -7,7 +7,7 @@ function AboutMe() {
   useIntersectionAnimation('.contentBlock');
 
   return (
-    <section className="aboutme">
+    <section className="aboutme" id="about" data-nav-section>
       <h1>{aboutMeData.title}</h1>
 
       {aboutMeData.sections.map((section, sectionIndex) => (
