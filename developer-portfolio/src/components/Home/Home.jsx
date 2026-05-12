@@ -3,12 +3,18 @@ import "../../styles/home.css";
 import SocialLinks from '../SocialLinks/SocialLinks';
 
 
-function Home() {
+function Home({ shouldAnimate = true }) {
   const words = ["Software Developer", "Network Engineer", "Penetration Tester"];
   const [text, setText] = useState(""); // Holds the current displayed text
   const [wordIndex, setWordIndex] = useState(0); // Index of the word being typed
   const [isDeleting, setIsDeleting] = useState(false); // Tracks headline letters deleting
   const [showCursor, setShowCursor] = useState(true); // Controls the flashing cursor
+  const [isAnimating, setIsAnimating] = useState(shouldAnimate);
+
+  // Update animation state when shouldAnimate changes
+  useEffect(() => {
+    setIsAnimating(shouldAnimate);
+  }, [shouldAnimate]);
 
   useEffect(() => {
     const currentWord = words[wordIndex];
@@ -50,7 +56,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="home" id="home" data-nav-section>
+    <section className={`home ${isAnimating ? 'animate-in' : ''}`} id="home" data-nav-section>
       <div>
         <img 
           className="portrait"

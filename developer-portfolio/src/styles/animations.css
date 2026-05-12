@@ -83,9 +83,11 @@
   }
   70% {
     transform: perspective(800px) rotateY(10deg) translateY(10px) scale(0.95);
+    opacity: 1;
   }
   100% {
     transform: perspective(800px) rotateY(0deg) translateY(0) scale(1);
+    opacity: 1;
   }
 }
 

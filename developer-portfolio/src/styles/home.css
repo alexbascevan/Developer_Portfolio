@@ -15,7 +15,14 @@
   justify-content: center;
   text-align: center;
   color: var(--text-color);
-  animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) 2.8s both;
+  /* Animation starts when animate-in class is applied */
+  opacity: 0;
+  transform: perspective(800px) rotateY(90deg) translateY(100px) scale(0.8);
+}
+
+/* Trigger animation when class is applied */
+.home.animate-in {
+  animation: flipIn 1.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
 .home::before {

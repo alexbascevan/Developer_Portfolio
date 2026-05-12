@@ -1,19 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../../hooks/useTheme';
 
 const Loader = ({ isLoading }) => {
   const [isExiting, setIsExiting] = useState(false);
   const { theme } = useTheme();
+  const exitTimerRef = useRef(null);
+  const hasInitiatedExit = useRef(false);
 
   useEffect(() => {
-    if (!isLoading) {
+    // Only trigger exit once when isLoading becomes false
+    if (!isLoading && !hasInitiatedExit.current) {
+      hasInitiatedExit.current = true;
       setIsExiting(true);
-      const exitTimer = setTimeout(() => {
+      
+      // Exit animation duration: 0.4s (400ms) - fast smooth fade out
+      exitTimerRef.current = setTimeout(() => {
         setIsExiting(false);
-      }, 1000);
-      return () => clearTimeout(exitTimer);
+      }, 400);
     }
-  }, [isLoading]);
+
+    // Cleanup on unmount or when component is gone
+    return () => {
+      if (exitTimerRef.current) {
+        clearTimeout(exitTimerRef.current);
+      }
+    };
+  }, [isLoading]); // Only depend on isLoading, not isExiting
 
   if (!isLoading && !isExiting) {
     return null;
