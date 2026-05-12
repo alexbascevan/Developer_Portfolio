@@ -6,7 +6,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Loader from './components/Loader/Loader';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import Navigation from './components/Navigation/Navigation';
-import Home from './components/home/Home';
+import Home from './components/home/Home.jsx';
 import Skills from './components/Skills/Skills';
 import AboutMe from './components/AboutMe/AboutMe';
 import ContactMe from './components/ContactMe/ContactMe';
