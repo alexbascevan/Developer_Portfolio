@@ -188,19 +188,21 @@
     z-index: 999;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background-color var(--transition-normal);
+    position: fixed;
   }
 
   .mobile-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-color);
     letter-spacing: 0.5px;
-    flex: 1;
-    text-align: center;
+    white-space: nowrap;
     transition: color var(--transition-normal);
   }
 
@@ -218,6 +220,8 @@
     padding: 0;
     gap: 6px;
     transition: all var(--transition-normal);
+    position: relative;
+    z-index: 2;
   }
 
   .hamburger span {
