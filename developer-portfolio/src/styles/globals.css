@@ -1,7 +1,7 @@
 @import './variables.css';
 @import './animations.css';
 @import './components.css';
-@import '../components/Navigation/navigation.css';
+@import './navigation.css';
 @import './loader.css';
 @import './home.css';
 @import './skills.css';

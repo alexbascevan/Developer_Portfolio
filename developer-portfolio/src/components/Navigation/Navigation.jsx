@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../../hooks/useTheme';
-import './navigation.css';
+import '../../styles/navigation.css';
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
