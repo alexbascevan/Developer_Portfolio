@@ -4,7 +4,7 @@ export const socialLinks = [
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/alex-bascevan-2697752b7",
     icon: "FaLinkedin",
-    color: "#6bb7f2",
+    color: "var(--linkedin-color)",
     target: "_blank"
   },
   {
@@ -12,7 +12,7 @@ export const socialLinks = [
     label: "GitHub",
     url: "https://github.com/alexbascevan",
     icon: "FaGithub",
-    color: "#ffffff",
+    color: "var(--github-color)",
     target: "_blank"
   },
   {
