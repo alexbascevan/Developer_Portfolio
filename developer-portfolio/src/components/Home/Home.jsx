@@ -1,23 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import "../../styles/home.css";
 import SocialLinks from '../SocialLinks/SocialLinks';
 
+const TYPING_WORDS = ["Software Developer", "Network Engineer", "Penetration Tester"];
 
 function Home({ shouldAnimate = true }) {
-  const words = ["Software Developer", "Network Engineer", "Penetration Tester"];
   const [text, setText] = useState(""); // Holds the current displayed text
   const [wordIndex, setWordIndex] = useState(0); // Index of the word being typed
   const [isDeleting, setIsDeleting] = useState(false); // Tracks headline letters deleting
   const [showCursor, setShowCursor] = useState(true); // Controls the flashing cursor
-  const [isAnimating, setIsAnimating] = useState(shouldAnimate);
-
-  // Update animation state when shouldAnimate changes
-  useEffect(() => {
-    setIsAnimating(shouldAnimate);
-  }, [shouldAnimate]);
 
   useEffect(() => {
-    const currentWord = words[wordIndex];
+    if (!shouldAnimate) {
+      return;
+    }
+
+    const currentWord = TYPING_WORDS[wordIndex];
     let timeout;
 
     if (isDeleting) {
@@ -40,23 +38,27 @@ function Home({ shouldAnimate = true }) {
     // When the word is fully deleted, switch to the next word
     if (isDeleting && text === "") {
       setIsDeleting(false);
-      setWordIndex((prevIndex) => (prevIndex + 1) % words.length); // Loop back to start
+      setWordIndex((prevIndex) => (prevIndex + 1) % TYPING_WORDS.length); // Loop back to start
     }
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, wordIndex]);
+  }, [text, isDeleting, wordIndex, shouldAnimate]);
 
-  // Blinking cursor effect
+  // Blinking cursor effect - only after animation starts
   useEffect(() => {
+    if (!shouldAnimate) {
+      return;
+    }
+
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
     }, 500); // Blinks every 500ms
 
     return () => clearInterval(cursorInterval);
-  }, []);
+  }, [shouldAnimate]);
 
   return (
-    <section className={`home ${isAnimating ? 'animate-in' : ''}`} id="home" data-nav-section>
+    <section className={`home ${shouldAnimate ? 'animate-in' : ''}`} id="home" data-nav-section>
       <div>
         <img 
           className="portrait"

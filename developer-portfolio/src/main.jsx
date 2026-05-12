@@ -55,14 +55,11 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Trigger Home animation after loader is completely gone
+  // Trigger Home animation when loader exits
   useEffect(() => {
     if (!isLoading) {
-      // Wait for loader exit animation to fully complete (400ms) + small buffer
-      const homeTimer = setTimeout(() => {
-        setShowHome(true);
-      }, 450);
-      return () => clearTimeout(homeTimer);
+      // Start home animation immediately when loader exits
+      setShowHome(true);
     }
   }, [isLoading]);
 
@@ -74,9 +71,7 @@ const App = () => {
         <Navigation />
 
         <div style={{ 
-          opacity: isLoading ? 0 : 1,
-          pointerEvents: isLoading ? 'none' : 'auto',
-          transition: 'opacity 0.3s ease-in-out'
+          pointerEvents: isLoading ? 'none' : 'auto'
         }}>
           <Home shouldAnimate={showHome} />
           <hr />
