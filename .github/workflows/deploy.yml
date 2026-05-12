@@ -34,3 +34,5 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: developer-portfolio/dist/
           server-dir: ${{ secrets.FTP_DIR }}
+          dangerous-clean-slate: true
+          log-level: verbose
