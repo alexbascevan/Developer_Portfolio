@@ -8,28 +8,33 @@ const Navigation = () => {
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    const observerOptions = {
-      root: document.querySelector('#root'),
-      rootMargin: '0px 0px -80% 0px',
-      threshold: 0,
-    };
+    const scrollContainer = document.querySelector('#root');
+    const sections = document.querySelectorAll('[data-nav-section]');
+    
+    if (!scrollContainer || sections.length === 0) return;
 
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+    const updateActiveSection = () => {
+      let currentSection = sections[0]?.id || 'home';
+      const triggerOffset = 150; // pixels from top of viewport where section becomes "active"
+
+      // Iterate through sections and find the last one whose top is within the trigger zone
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        // If this section's top is at or above the trigger offset, it's the currently active section
+        if (rect.top <= triggerOffset) {
+          currentSection = section.id;
         }
       });
+
+      setActiveSection(currentSection);
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    const sections = document.querySelectorAll('[data-nav-section]');
-    sections.forEach((section) => observer.observe(section));
+    // Call on scroll
+    scrollContainer.addEventListener('scroll', updateActiveSection, { passive: true });
+    updateActiveSection(); // Initial call
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
+      scrollContainer.removeEventListener('scroll', updateActiveSection);
     };
   }, []);
 
